@@ -1,0 +1,10 @@
+services:
+  amlicode:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: amlicode:latest
+    container_name: amlicode
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
